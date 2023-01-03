@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LibraryAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Kaynaklar">
+          <Key>
+            <PropertyRef Name="kaynak_id" />
+          </Key>
+          <Property Name="kaynak_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kaynak_ad" Type="nchar" MaxLength="10" />
+          <Property Name="kaynak_yazar" Type="nchar" MaxLength="10" />
+          <Property Name="kaynak_yayinci" Type="nchar" MaxLength="10" />
+          <Property Name="kaynak_sayfasayisi" Type="int" />
+          <Property Name="kaynak_basimtarigi" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="kullanici_id" />
+          </Key>
+          <Property Name="kullanici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanici_ad" Type="nchar" MaxLength="10" />
+          <Property Name="kullanici_soyad" Type="nchar" MaxLength="10" />
+          <Property Name="kullanici_tc" Type="nchar" MaxLength="11" />
+          <Property Name="kullanici_mail" Type="nchar" MaxLength="50" />
+          <Property Name="kullanici_tel" Type="nchar" MaxLength="11" />
+          <Property Name="kullanici_ceza" Type="float" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="personal_id" />
+          </Key>
+          <Property Name="personal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personal_ad" Type="nchar" MaxLength="50" />
+          <Property Name="personal_soyad" Type="nchar" MaxLength="50" />
+          <Property Name="personal_tc" Type="nchar" MaxLength="11" />
+          <Property Name="personal_tel" Type="nchar" MaxLength="11" />
+          <Property Name="personal_mail" Type="nchar" MaxLength="50" />
+          <Property Name="personal_kullanici" Type="nchar" MaxLength="50" />
+          <Property Name="personal_sifre" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="LibraryAppModelStoreContainer">
+          <EntitySet Name="Kaynaklar" EntityType="Self.Kaynaklar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibraryAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="personal_id" />
+          </Key>
+          <Property Name="personal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personal_ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personal_soyad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personal_tc" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="personal_tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="personal_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personal_kullanici" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personal_sifre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="LibraryAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" />
+          <EntitySet Name="Kullanicilar" EntityType="LibraryAppModel.Kullanicilar" />
+          <EntitySet Name="Kaynaklar" EntityType="LibraryAppModel.Kaynaklar" />
+        </EntityContainer>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="kullanici_id" />
+          </Key>
+          <Property Name="kullanici_id" Type="Int32" Nullable="false" />
+          <Property Name="kullanici_ad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_soyad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_tc" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_ceza" Type="Double" />
+        </EntityType>
+        <EntityType Name="Kaynaklar">
+          <Key>
+            <PropertyRef Name="kaynak_id" />
+          </Key>
+          <Property Name="kaynak_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kaynak_ad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="kaynak_yazar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="kaynak_yayinci" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="kaynak_sayfasayisi" Type="Int32" />
+          <Property Name="kaynak_basimtarigi" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibraryAppModelStoreContainer" CdmEntityContainer="LibraryAppEntities">
+          <EntitySetMapping Name="Personeller">
+            <EntityTypeMapping TypeName="LibraryAppModel.Personeller">
+              <MappingFragment StoreEntitySet="Personeller">
+                <ScalarProperty Name="personal_id" ColumnName="personal_id" />
+                <ScalarProperty Name="personal_ad" ColumnName="personal_ad" />
+                <ScalarProperty Name="personal_soyad" ColumnName="personal_soyad" />
+                <ScalarProperty Name="personal_tc" ColumnName="personal_tc" />
+                <ScalarProperty Name="personal_tel" ColumnName="personal_tel" />
+                <ScalarProperty Name="personal_mail" ColumnName="personal_mail" />
+                <ScalarProperty Name="personal_kullanici" ColumnName="personal_kullanici" />
+                <ScalarProperty Name="personal_sifre" ColumnName="personal_sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kullanicilar">
+            <EntityTypeMapping TypeName="LibraryAppModel.Kullanicilar">
+              <MappingFragment StoreEntitySet="Kullanicilar">
+                <ScalarProperty Name="kullanici_ceza" ColumnName="kullanici_ceza" />
+                <ScalarProperty Name="kullanici_tel" ColumnName="kullanici_tel" />
+                <ScalarProperty Name="kullanici_mail" ColumnName="kullanici_mail" />
+                <ScalarProperty Name="kullanici_tc" ColumnName="kullanici_tc" />
+                <ScalarProperty Name="kullanici_soyad" ColumnName="kullanici_soyad" />
+                <ScalarProperty Name="kullanici_ad" ColumnName="kullanici_ad" />
+                <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kaynaklar">
+            <EntityTypeMapping TypeName="LibraryAppModel.Kaynaklar">
+              <MappingFragment StoreEntitySet="Kaynaklar">
+                <ScalarProperty Name="kaynak_basimtarigi" ColumnName="kaynak_basimtarigi" />
+                <ScalarProperty Name="kaynak_sayfasayisi" ColumnName="kaynak_sayfasayisi" />
+                <ScalarProperty Name="kaynak_yayinci" ColumnName="kaynak_yayinci" />
+                <ScalarProperty Name="kaynak_yazar" ColumnName="kaynak_yazar" />
+                <ScalarProperty Name="kaynak_ad" ColumnName="kaynak_ad" />
+                <ScalarProperty Name="kaynak_id" ColumnName="kaynak_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

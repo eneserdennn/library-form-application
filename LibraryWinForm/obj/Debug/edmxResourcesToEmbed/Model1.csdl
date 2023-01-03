@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="personal_id" />
+    </Key>
+    <Property Name="personal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="personal_ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="personal_soyad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="personal_tc" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="personal_tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="personal_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="personal_kullanici" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="personal_sifre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="LibraryAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Personeller" EntityType="Self.Personeller" />
+    <EntitySet Name="Kullanicilar" EntityType="LibraryAppModel.Kullanicilar" />
+    <EntitySet Name="Kaynaklar" EntityType="LibraryAppModel.Kaynaklar" />
+  </EntityContainer>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="kullanici_id" />
+    </Key>
+    <Property Name="kullanici_id" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_ad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kullanici_soyad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kullanici_tc" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="kullanici_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="kullanici_tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="kullanici_ceza" Type="Double" />
+  </EntityType>
+  <EntityType Name="Kaynaklar">
+    <Key>
+      <PropertyRef Name="kaynak_id" />
+    </Key>
+    <Property Name="kaynak_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kaynak_ad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kaynak_yazar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kaynak_yayinci" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kaynak_sayfasayisi" Type="Int32" />
+    <Property Name="kaynak_basimtarigi" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibraryAppModelStoreContainer" CdmEntityContainer="LibraryAppEntities">
+    <EntitySetMapping Name="Personeller">
+      <EntityTypeMapping TypeName="LibraryAppModel.Personeller">
+        <MappingFragment StoreEntitySet="Personeller">
+          <ScalarProperty Name="personal_id" ColumnName="personal_id" />
+          <ScalarProperty Name="personal_ad" ColumnName="personal_ad" />
+          <ScalarProperty Name="personal_soyad" ColumnName="personal_soyad" />
+          <ScalarProperty Name="personal_tc" ColumnName="personal_tc" />
+          <ScalarProperty Name="personal_tel" ColumnName="personal_tel" />
+          <ScalarProperty Name="personal_mail" ColumnName="personal_mail" />
+          <ScalarProperty Name="personal_kullanici" ColumnName="personal_kullanici" />
+          <ScalarProperty Name="personal_sifre" ColumnName="personal_sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanicilar">
+      <EntityTypeMapping TypeName="LibraryAppModel.Kullanicilar">
+        <MappingFragment StoreEntitySet="Kullanicilar">
+          <ScalarProperty Name="kullanici_ceza" ColumnName="kullanici_ceza" />
+          <ScalarProperty Name="kullanici_tel" ColumnName="kullanici_tel" />
+          <ScalarProperty Name="kullanici_mail" ColumnName="kullanici_mail" />
+          <ScalarProperty Name="kullanici_tc" ColumnName="kullanici_tc" />
+          <ScalarProperty Name="kullanici_soyad" ColumnName="kullanici_soyad" />
+          <ScalarProperty Name="kullanici_ad" ColumnName="kullanici_ad" />
+          <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kaynaklar">
+      <EntityTypeMapping TypeName="LibraryAppModel.Kaynaklar">
+        <MappingFragment StoreEntitySet="Kaynaklar">
+          <ScalarProperty Name="kaynak_basimtarigi" ColumnName="kaynak_basimtarigi" />
+          <ScalarProperty Name="kaynak_sayfasayisi" ColumnName="kaynak_sayfasayisi" />
+          <ScalarProperty Name="kaynak_yayinci" ColumnName="kaynak_yayinci" />
+          <ScalarProperty Name="kaynak_yazar" ColumnName="kaynak_yazar" />
+          <ScalarProperty Name="kaynak_ad" ColumnName="kaynak_ad" />
+          <ScalarProperty Name="kaynak_id" ColumnName="kaynak_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
