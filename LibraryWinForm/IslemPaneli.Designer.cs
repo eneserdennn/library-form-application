@@ -39,6 +39,7 @@
             this.ekleKullanici = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.kullaniciBilgiPanel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.silKaynakBtn);
             this.panel1.Controls.Add(this.guncelleKaynakBtn);
             this.panel1.Controls.Add(this.ekleKaynakBtn);
@@ -197,6 +199,22 @@
             this.kullaniciBilgiPanel.Size = new System.Drawing.Size(1126, 73);
             this.kullaniciBilgiPanel.TabIndex = 1;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button3.Location = new System.Drawing.Point(0, 616);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(399, 77);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Ödünç Ver";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // IslemPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,5 +245,6 @@
         private System.Windows.Forms.Button guncelleKaynakBtn;
         private System.Windows.Forms.Button ekleKaynakBtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

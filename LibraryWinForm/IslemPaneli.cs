@@ -1,4 +1,5 @@
-﻿using LibraryWinForm.Kaynak;
+﻿using LibraryWinForm.Kayit;
+using LibraryWinForm.Kaynak;
 using LibraryWinForm.Kullanici;
 using System;
 using System.Collections.Generic;
@@ -110,6 +111,13 @@ namespace LibraryWinForm
             KaynakGuncelleForm kaynakGuncelle = new KaynakGuncelleForm();
             kaynakGuncelle.MdiParent= this;
             kaynakGuncelle.Show(); 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OduncVerForm odunc = new OduncVerForm();
+            odunc.MdiParent= this;
+            odunc.Show();
         }
     }
 }

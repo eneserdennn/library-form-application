@@ -12,15 +12,16 @@ namespace LibraryWinForm
     using System;
     using System.Collections.Generic;
     
-    public partial class Kaynaklar
+    public partial class Kayitlar
     {
-        public int kaynak_id { get; set; }
-        public string kaynak_ad { get; set; }
-        public string kaynak_yazar { get; set; }
-        public string kaynak_yayinci { get; set; }
-        public Nullable<int> kaynak_sayfasayisi { get; set; }
-        public Nullable<System.DateTime> kaynak_basimtarigi { get; set; }
+        public int kayit_id { get; set; }
+        public Nullable<int> kullanici_id { get; set; }
+        public Nullable<int> kitap_id { get; set; }
+        public Nullable<System.DateTime> kayit_alis_tarih { get; set; }
+        public Nullable<System.DateTime> kayit_son_tarih { get; set; }
+        public Nullable<bool> durum { get; set; }
     
-        public virtual Kayitlar Kayitlar { get; set; }
+        public virtual Kaynaklar Kaynaklar { get; set; }
+        public virtual Kullanicilar Kullanicilar { get; set; }
     }
 }

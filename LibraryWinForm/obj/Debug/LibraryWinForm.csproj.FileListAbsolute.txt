@@ -23,3 +23,4 @@ C:\Users\enes\Desktop\LibraryWinForm\LibraryWinForm\obj\Debug\LibraryWinForm.Kay
 C:\Users\enes\Desktop\LibraryWinForm\LibraryWinForm\obj\Debug\LibraryWinForm.Kaynak.KaynakEkleForm.resources
 C:\Users\enes\Desktop\LibraryWinForm\LibraryWinForm\obj\Debug\LibraryWinForm.Kaynak.KaynakSilForm.resources
 C:\Users\enes\Desktop\LibraryWinForm\LibraryWinForm\obj\Debug\LibraryWinForm.Kaynak.KaynakGuncelleForm.resources
+C:\Users\enes\Desktop\LibraryWinForm\LibraryWinForm\obj\Debug\LibraryWinForm.Kayit.OduncVerForm.resources

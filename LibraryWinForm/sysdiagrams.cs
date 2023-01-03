@@ -12,15 +12,12 @@ namespace LibraryWinForm
     using System;
     using System.Collections.Generic;
     
-    public partial class Kaynaklar
+    public partial class sysdiagrams
     {
-        public int kaynak_id { get; set; }
-        public string kaynak_ad { get; set; }
-        public string kaynak_yazar { get; set; }
-        public string kaynak_yayinci { get; set; }
-        public Nullable<int> kaynak_sayfasayisi { get; set; }
-        public Nullable<System.DateTime> kaynak_basimtarigi { get; set; }
-    
-        public virtual Kayitlar Kayitlar { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
